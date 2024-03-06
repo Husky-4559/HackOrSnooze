@@ -34,16 +34,13 @@
     <div class="navbar-brand">
       <a class=" hover-link nav-link" href="#" id="nav-all">Hack or Snooze</a>
     </div>
-    <div class="submitbar-brand">
+    <!-- <div class="submitbar-brand"> -->
+    <div class="primary-nav-links">
       <a href="#" class="hover-link submit-link" id="submit-all">Submit</a>
-    </div>
-    <div class="favorites-brand">
       <a href="#" class="hover-link favorites-link" id="favorites-all">Favorites</a>
-    </div>
-    <div class="mystories-brand">
       <a href="#" class="hover-link mystories-link" id="mystories-all">My Stories</a>
     </div>
-    <div class="nav-right">
+    <div class=" hover-link nav-right">
       <a class="nav-link" href="#" id="nav-login">login/signup</a>
       <a class="nav-link" href="#" id="nav-user-profile"></a>
       <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
@@ -51,13 +48,37 @@
   </nav>
 
   <!-- area for stories (all stories, user stories, favorites) -->
-  <section class="stories-container container">
+  <section id="stories-container" class="stories-container container">
+
+    <!-- Submission form for New Stories  -->
+
+    <form action="" class="hidden" id="submit-form">
+      <div>
+        <label for="generate-author">Author</label>
+        <input id="generate-author" required placeholder="Author Name">
+      </div>
+      <div>
+        <label for="generate-title">Title</label>
+        <input id="generate-title" required placeholder="Title Name">
+      </div>
+      <div>
+        <label for="generate-url">Author</label>
+        <input id="generate-url" required type="url" placeholder="Title Url">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
 
     <!-- loading message (removed by JS after stories loaded) -->
     <div id="stories-loading-msg">Loading&hellip;</div>
 
     <!-- List of all stories -->
     <ol id="all-stories-list" class="stories-list"></ol>
+
+    <!-- List of Stories Favorited By User -->
+    <ol id="favorited-stories" class="hidden stories-list"></ol>
+
+    <!-- list of stories by the user -->
+    <ol id="my-stories" class="hidden stories-list"></ol>
 
   </section>
 
@@ -97,6 +118,19 @@
       <button type="submit">create account</button>
     </form>
   </section>
+
+  <!-- User Profiles -->
+  <section id="user-profile" class="hidden">
+    <div class="user-profile-box container">
+      <h4>Profile Information</h4>
+      <section>
+        <div>Name: <span id="profile-name">Name:</span></div>
+        <div>Username: <span id="profile-username">Name:</span></div>
+        <div>Account Created: <span id="profile-account-date">Name:</span></div>
+      </section>
+    </div>
+  </section>
+
 
   <!-- Library JS & our JS -->
   <script src="https://unpkg.com/jquery"></script>
