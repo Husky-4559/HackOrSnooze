@@ -1,0 +1,56 @@
+/* Navigation bar */
+
+nav {
+	position: relative;
+	display: flex;
+	background-color: #ff6600;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 20px;
+	border-radius: 3px 3px 0 0;
+	/* z-index: 100; */
+}
+
+.navbar-brand {
+	font-weight: bolder;
+	font-size: 26px;
+}
+
+.submit-link {
+	font-size: 18px;
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.favorites-link {
+	font-size: 18px;
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.mystories-link {
+	font-size: 18px;
+	color: black;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 40px;
+}
+
+.nav-right {
+	margin-left: auto;
+	text-align: right;
+}
+
+.hover-link {
+	cursor: pointer;
+}
+
+.hover-link:hover {
+	opacity: 0.6;
+	color: rgb(255, 255, 255);
+	transition: 0.3s;
+}
